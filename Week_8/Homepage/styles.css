@@ -1,0 +1,68 @@
+.main{
+    background: url("rectangle_grey.png") no-repeat right top, url("rectangle_green.png") no-repeat left top;
+    background-size: 38% 550px, 70% 500px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.card {
+	transition: all ease 0.4s;
+}
+.card:hover {
+	transform: scale(1.1)
+}
+
+
+/* Contact Form */
+
+.contact-form{
+    margin-bottom: 30vh;
+    width: 80%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+
+.contact-form form{
+    padding: 10%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h2{
+    margin-bottom:5%;
+    margin-top: -5%;
+    text-align: center;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #e6f6e3;
+    background-color: #e6f6e3;
+    border: none;
+    cursor: pointer;
+}
+
+/* /Contact Form */
+

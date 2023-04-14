@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Trivia!</title>
+    <script>
+        function checkAnswer(selectedOption) {
+            var resultDisplay = document.getElementById("result");
+            if (selectedOption.innerHTML === "21 January 1924") {
+                selectedOption.style.backgroundColor = "green";
+                resultDisplay.innerHTML = "Correct!";
+            } else {
+                selectedOption.style.backgroundColor = "red";
+                resultDisplay.innerHTML = "Incorrect";
+            }
+        }
+
+        function checkFreeResponseAnswer() {
+            var answerInput = document.getElementById("answerInput");
+            var resultDisplay = document.getElementById("freeResponseResult");
+
+            if (answerInput.value.toLowerCase() === "le louvre" || answerInput.value.toLowerCase() === "the louvre" || answerInput.value.toLowerCase() === "louvre") {
+                answerInput.style.backgroundColor = "green";
+                resultDisplay.innerHTML = "Correct!";
+            } else {
+                answerInput.style.backgroundColor = "red";
+                resultDisplay.innerHTML = "Incorrect";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Trivia!</h1>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2>Part 1: Multiple Choice </h2>
+            <hr>
+            <h3>When did Lenin die?</h3>
+            <button id="option1" onclick="checkAnswer(this)">21 January 1924</button>
+            <button id="option2" onclick="checkAnswer(this)">21 January 1934</button>
+            <button id="option3" onclick="checkAnswer(this)">21 January 1944</button>
+            <button id="option4" onclick="checkAnswer(this)">21 January 1954</button>
+            <p id="result"></p>
+        </div>
+
+        <div class="section">
+            <h2>Part 2: Free Response</h2>
+            <hr>
+            <h3>In which museum can you find Leonardo Da Vinci Mona Lisa?</h3>
+            <input id="answerInput">
+            <button id="submitButton" onclick="checkFreeResponseAnswer()">Submit</button>
+            <p id="freeResponseResult"></p>
+        </div>
+    </div>
+</body>
+
+</html>
