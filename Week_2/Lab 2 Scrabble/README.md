@@ -3,6 +3,7 @@ This program is a simple implementation of a Scrabble-like game. Two players ent
 
 ## Dependencies
 The program requires the following dependencies:
+
 :arrow_forward: C Standard Library: stdio.h, string.h, ctype.h
 
 :arrow_forward: CS50 Library: cs50.h
