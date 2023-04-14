@@ -1,0 +1,20 @@
+sort1 uses: Bubble Sort
+
+How do you know?:
+random50000: real    0m7.695s
+rev50000: real    0m5.679s
+sorted50000: real    0m0.746s
+
+sort2 uses: Merge Sort
+
+How do you know?:
+random50000: real    0m0.846s
+rev50000: real    0m0.534s
+sort50000: real    0m0.689s
+
+sort3 uses: Selection Sort
+
+How do you know?:
+random50000: real    0m3.427s
+rev50000: real    0m3.234s
+sort50000: real    0m3.294s
