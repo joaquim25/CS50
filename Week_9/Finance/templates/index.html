@@ -1,0 +1,57 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Shares</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Buy</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in stocks %}
+                    <tr>
+                    {% if stock["totnum"] >0 %}
+                        <td class="text-start">{{ stock["symbol"] }}</td>
+                        <td class="text-start">{{ stock["name"] }}</td>
+                        <td class="text-end">{{ stock["totnum"] }}</td>
+                        <td class="text-end">{{ usd(stock["recent_price"]) }}</td>
+                        <td class="text-end">{{ usd(stock["totnum"] * stock["recent_price"]) }}</td>
+                        <td>
+                            <form action="/" method="post">
+                                <input type="number" id="shares" name="shares" min="1" size="4">
+                                <button name="button" value="B {{stock.symbol}}" class="btn btn-primary" type="submit">Buy</button>
+                                <button name="button" value="S {{stock.symbol}}" class="btn btn-primary" type="submit">Sell</button>
+                            </form>
+                        </td>
+                    {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="4">Cash</td>
+                    <td class="text-end">{{ usd(cash) }}</td>
+                </tr>
+                <tr>
+                    <td class="border-0 fw-bold text-end" colspan="4">TOTAL</td>
+                    <td class="text-end">{{ usd(cash + tot_hold) }}</td>
+                </tr>
+            </tfoot>
+
+        </table>
+    </form>
+
+
+
+
+{% endblock %}
