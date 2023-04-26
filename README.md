@@ -22,6 +22,8 @@ The repository is organized by weeks, and each week contains several programming
 
 - **Week 9:** In the final week, we combine our knowledge of web development and databases to create a web app called Finance, a simple stock trading platform. Also created an app that stores and displays information about friends' birthdays.
 
+- **Final Project:** Check my final project for this Course [here](https://github.com/joaquim25/Final-CS-50)
+
 ### Getting Started
 To access any of the programs listed above, simply navigate to the relevant week's folder and open the corresponding file in your preferred text editor. You'll find detailed instructions and requirements for each challenge in the README files included in each folder.
 
